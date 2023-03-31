@@ -1,0 +1,128 @@
+<div class="leftside-menu">
+
+    <!-- Brand Logo Light -->
+    <a href="index.html" class="logo logo-light">
+        <span class="logo-lg">
+            <img src="assets/images/logodaby.png" alt="logo">
+        </span>
+        <span class="logo-sm">
+            <img src="assets/images/logo-sm.png" alt="small logo">
+        </span>
+    </a>
+
+    <!-- Brand Logo Dark -->
+    <a href="index.html" class="logo logo-dark">
+        <span class="logo-lg">
+            <img src="assets/images/logo-dark.png" alt="dark logo">
+        </span>
+        <span class="logo-sm">
+            <img src="assets/images/logo-dark-sm.png" alt="small logo">
+        </span>
+    </a>
+
+    <!-- Sidebar Hover Menu Toggle Button -->
+    <div class="button-sm-hover" data-bs-toggle="tooltip" data-bs-placement="right" title="Show Full Sidebar">
+        <i class="ri-checkbox-blank-circle-line align-middle"></i>
+    </div>
+
+    <!-- Full Sidebar Menu Close Button -->
+    <div class="button-close-fullsidebar">
+        <i class="ri-close-fill align-middle"></i>
+    </div>
+
+    <!-- Sidebar -left -->
+    <div class="h-100" id="leftside-menu-container" data-simplebar>
+        <!-- Leftbar User -->
+      
+
+        <!--- Sidemenu -->
+        <ul class="side-nav">
+
+        
+
+            <li class="side-nav-item">
+                <a data-bs-toggle="collapse" routerLink="dashbord" aria-expanded="false" aria-controls="sidebarDashboards" class="side-nav-link">
+                    <i class="uil-home-alt"></i>
+                   
+                    <span> Dashboards </span>
+                </a>
+                <div class="collapse" id="sidebarDashboards">
+                 
+                </div>
+            </li>
+
+            <li class="side-nav-title">Apps</li>
+
+           
+
+         
+
+           
+
+            <li class="side-nav-item">
+                <a data-bs-toggle="collapse" href="#sidebarEcommerce" aria-expanded="false" aria-controls="sidebarEcommerce" class="side-nav-link">
+                    <i class="uil-store"></i>
+                    <span> Adminstrateur </span>
+                    <span class="menu-arrow"></span>
+                </a>
+                <div class="collapse" id="sidebarEcommerce">
+                    <ul class="side-nav-second-level">
+                        <li>
+                            <a routerLink="ajoutAdmin">Ajouter Adminstrateur</a>
+                        </li>
+                        <li>
+                            <a routerLink="listAdmin">Listes Adminstrateur</a>
+                        </li>
+                    
+                    </ul>
+                </div>
+            </li>
+
+            <li class="side-nav-item">
+                <a data-bs-toggle="collapse" href="#sidebarEmail" aria-expanded="false" aria-controls="sidebarEmail" class="side-nav-link">
+                    <i class="uil-envelope"></i>
+                    <span> Clients </span>
+                    <span class="menu-arrow"></span>
+                </a>
+                <div class="collapse" id="sidebarEmail">
+                    <ul class="side-nav-second-level">
+                        <li>
+                            <a href="apps-email-inbox.html">Ajouter Clients</a>
+                        </li>
+                        <li>
+                            <a routerLink="listClient">List Clients</a>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+
+            <li class="side-nav-item">
+                <a data-bs-toggle="collapse" href="#sidebarProjects" aria-expanded="false" aria-controls="sidebarProjects" class="side-nav-link">
+                    <i class="uil-briefcase"></i>
+                    <span> DAB </span>
+                    <span class="menu-arrow"></span>
+                </a>
+                <div class="collapse" id="sidebarProjects">
+                    <ul class="side-nav-second-level">
+                        <li>
+                            <a routerLink="ajoutDAB">Ajouter DAB</a>
+                        </li>
+                        <li>
+                            <a href="apps-projects-details.html">List DAB</a>
+                        </li>
+                     
+                    </ul>
+                </div>
+            </li>
+            <li class="side-nav-item">
+                <a routerLink="messages" class="side-nav-link">
+                    <i class="uil-folder-plus"></i>
+                    <span> Messages </span>
+                </a>
+            </li>
+        </ul>
+        <!--- End Sidemenu -->
+
+        <div class="clearfix"></div>
+    </div>
+</div>
