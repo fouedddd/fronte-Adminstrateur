@@ -1,7 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './home/home.component';
-import { AjoutadminComponent } from './Pages/Adminstrateur/ajoutadmin/ajoutadmin.component';
 import { ListadminComponent } from './pages/Adminstrateur/listadmin/listadmin.component';
 import { ModifadminComponent } from './pages/Adminstrateur/modifadmin/modifadmin.component';
 import { ListclientComponent } from './pages/Client/listclient/listclient.component';
@@ -10,6 +9,7 @@ import { ModiftDABComponent } from './pages/DAB/modift-dab/modift-dab.component'
 import { LoginComponent } from './pages/login/login.component';
 import { ListMessageComponent } from './pages/Message/list-message/list-message.component';
 import { RegisterComponent } from './pages/register/register.component';
+import { ListDABComponent } from './pages/DAB/list-dab/list-dab.component';
 
 const routes: Routes = [
 {
@@ -17,10 +17,7 @@ const routes: Routes = [
 component: LoginComponent
 },
 
-{
-  path:'ajoutAdmin',
-  component:AjoutadminComponent
-},
+
 {
   path:'listAdmin',
   component:ListadminComponent
@@ -42,7 +39,7 @@ component: LoginComponent
   component:ListMessageComponent
 },
 {
-  path:'dashbord',
+  path:'',
   component:HomeComponent
 },
 {
@@ -53,6 +50,11 @@ component: LoginComponent
   path:'register',
   component:RegisterComponent
 },
+{
+  path:'listDAB',
+  component:ListDABComponent
+}
+
 
 
 

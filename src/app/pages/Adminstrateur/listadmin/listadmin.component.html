@@ -44,7 +44,7 @@
                                     <div class="card-body">
                                         <div class="row mb-2">
                                             <div class="col-sm-5">
-                                                <a routerLink='/ajoutAdmin' class="btn btn-success mb-2"><i class="mdi mdi-plus-circle me-2"></i> ajouter Adminstrateur</a>
+                                                <button class="btn btn-success mb-2" (click)="ouvrirAjouterAdmin()"><i class="mdi mdi-plus-circle me-2"></i> ajouter Adminstrateur</button>
                                             </div>
                                             <div class="col-sm-7">
                                                 <div class="text-sm-end">
@@ -63,7 +63,7 @@
                                                         <th>Nom</th>
                                                         <th>Prénom</th>
                                                         <th>Email</th>
-                                                        
+                            
                                                         <th>Login</th>
                                                         <th>Password</th>
                                                         <th>ConfirmPassword</th>
@@ -79,7 +79,7 @@
                                                         <td>{{adminstrateur.password}}</td>
                                                         <td>{{adminstrateur.confirmpassword}}</td>
                                                        <td><a class="btn btn-danger" (click)="supprimerAdmin(adminstrateur)">supprimer</a>
-                                                        <a class="btn btn-success" [routerLink]="['/modifadmin',adminstrateur.idadmin] ">Modifier</a></td>
+                                                        <button (click)="ouvrirModifierAdmin(adminstrateur.idadmin)" class="btn  btn-success">Modifier</button>
                                                     </tr>
                                                     
                                                    

@@ -1,0 +1,13 @@
+.row{
+    display: flex;
+    height: 600px;
+    width: 400px;
+    padding-top: 30px;
+    
+    
+    }
+    .bt{
+        padding: 15px;
+        justify-content: center;
+        flex:1;
+    }

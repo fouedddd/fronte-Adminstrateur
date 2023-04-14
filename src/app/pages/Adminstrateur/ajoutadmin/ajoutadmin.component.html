@@ -1,57 +1,38 @@
-<html>
-<head>
-
-
-</head>
-<body >
-   <div class="container d-flex justify-content-center ">
-    <div class="row">
-        
-    </div>
-    <form>
-        <div  >
-            <h4 class="page-title">AJout Adminstrateur</h4>
-            <br>
-            <div class="mb-3">
-                <label for="simpleinput" class="form-label">Nom</label>
-                <input type="text" [(ngModel)]="newAdminstrateur.firstName" name="firstName" class="form-control">
-            </div>
-            
-            <div class="mb-3">
-                <label for="example-email" class="form-label">Prénom</label>
-                <input type="text" [(ngModel)]="newAdminstrateur.lastName" name="lastName" name="example-email" class="form-control" placeholder="Prénom">
-            </div>
-            
-            <div class="mb-3">
-                <label for="example-password" class="form-label">Email</label>
-                <input type="email" [(ngModel)]="newAdminstrateur.email"  name="email" class="form-control" placeholder="exmple@gmail.com">
-            </div>
-              
-            <div class="mb-3">
-                <label for="example-password" class="form-label">Login</label>
-                <input type="text" [(ngModel)]="newAdminstrateur.login"  name="login" class="form-control" placeholder="Login">
-            </div>
-            
- 
-            
-            <div class="mb-3">
-                <label for="example-palaceholder" class="form-label">Password</label>
-                <input type="password" [(ngModel)]="newAdminstrateur.password"  name="password" class="form-control" placeholder="placeholder">
-            </div>
-            
-            <div class="mb-3">
-                <label for="example-palaceholder" class="form-label">confirm Password</label>
-                <input type="password" [(ngModel)]="newAdminstrateur.confirmpassword"  name="confirmpassword" class="form-control" placeholder="">
-            </div>
-            <div class="mb-3">
-                <button  routerLink="listAdmin" class="btn btn-success"type="submit" (click)="addAdminstrateur()"><span>Ajouter</span></button><button class="btn btn-danger" type="reset"><span>Annuler</span></button>
-                <div>
-                    <h3>{{message}}</h3>
-                </div>
-            </div>
-            </div>
-    </form>
+<div mat-dialog-title><h1>{{!type ?'Ajouter Adminstrateur':'Modifier Adminstrateur'}}</h1></div>
+<form action="">
+<div mat-dialog-content>
+   <div class="row">
+  
+    <mat-form-field appearance="outline">
+        <mat-label>Nom</mat-label>
+        <input matInput type="text" name="nom" [(ngModel)]="newAdminstrateur.firstName">
+      </mat-form-field>
+      <mat-form-field appearance="outline">
+        <mat-label>Prénom</mat-label>
+        <input  matInput type="text" name="prenom"[(ngModel)]="newAdminstrateur.lastName">
+      </mat-form-field>
+      <mat-form-field appearance="outline">
+        <mat-label>Email</mat-label>
+        <input matInput type="email" name="email" [(ngModel)]="newAdminstrateur.email">
+      </mat-form-field>
+    
+      <mat-form-field appearance="outline">
+        <mat-label>Login</mat-label>
+        <input matInput type="text" name="login" [(ngModel)]="newAdminstrateur.login">
+      </mat-form-field>
+      <mat-form-field appearance="outline">
+        <mat-label>Password</mat-label>
+        <input matInput type="password" name="password" [(ngModel)]="newAdminstrateur.password">
+      </mat-form-field>
+      <mat-form-field appearance="outline">
+        <mat-label> Confirm Password</mat-label>
+        <input matInput type="password" name="password" [(ngModel)]="newAdminstrateur. confirmpassword">
+      </mat-form-field>
+   
    </div>
-
-</body>
-</html>
+</div>
+<div mat-dialog-actions class="bt">
+    <button mat-raised-button class="btn btn-danger" mat-dialog-close="false">cancel</button>
+    <button mat-raised-button class="btn btn-success" type="submit" (click)="ajouterAdmin()">{{!type ?'Ajouter':'Modifier'}}</button>
+</div>
+</form>

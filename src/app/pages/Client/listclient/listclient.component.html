@@ -2,7 +2,6 @@
 <html lang="en">
 
     
-<!-- Mirrored from coderthemes.com/hyper/saas/pages-profile.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 20 Mar 2023 20:41:14 GMT -->
 <head>
         <meta charset="utf-8" />
         <title>List-Client</title>
@@ -16,6 +15,7 @@
     <body>
         <!-- Begin page -->
         <div class="wrapper">
+          
 
             
            
@@ -36,38 +36,57 @@
                                         </ol>
                                     </div>
                                     <h4 class="page-title">List Client</h4>
+                                    <button mat-raised-button (click)="ouvrirAjouterClient()" class="btn btn-success">
+                                        <i class="mdi mdi-account-edit me-1"></i> Ajouter Client
+                                    </button>
                                 </div>
+                                <br>
                             </div>
                         </div>
                         <!-- end page title -->
 
-
+<div *ngFor="let client of clients">
                         <div class="row">
                             <div class="col-sm-12">
                                 <!-- Profile -->
-                                <div class="card bg-primary">
+                                <div class="card bg-primary" >
                                     <div class="card-body profile-user-box">
                                         <div class="row">
                                             <div class="col-sm-8">
                                                 <div class="row align-items-center">
                                                     <div class="col-auto">
-                                                        <div class="avatar-lg">
-                                                            <img src="assets/images/users/avatar-2.jpg" alt="" class="rounded-circle img-thumbnail">
-                                                        </div>
+                                                      
                                                     </div>
-                                                    <div class="col">
-                                                        <div>
-                                                            <h4 class="mt-1 mb-1 text-white">BenBrahim Jamil</h4>
-                                                            <p class="font-13 text-white-50"> 3attay tremi</p>
-    
+                                                    <div class="col" >
+                                                        <div >
                                                             <ul class="mb-0 list-inline text-light">
                                                                 <li class="list-inline-item me-3">
-                                                                    <h5 class="mb-1 text-white">$ 25,184</h5>
-                                                                    <p class="mb-0 font-13 text-white-50">Total Revenue</p>
+                                                            <h4 class="mt-1 mb-1 text-white">Nom</h4>
+                                                            <p class="font-13 text-white-50"> {{client.nom}}</p>
+                                                        </li>
+                                                        <li class="list-inline-item me-3">
+                                                            <h5 class="mb-1 text-white">Prénom</h5>
+                                                            <p class="mb-0 font-13 text-white-50">{{client.prenom}}</p>
+                                                        </li>
+                                                        <li class="list-inline-item me-3">
+                                                            <h5 class="mb-1 text-white">Email</h5>
+                                                            <p class="mb-0 font-13 text-white-50">{{client.email}}</p>
+                                                        </li>
+                                                            </ul>
+    
+                                                            <ul class="mb-0 list-inline text-light">
+                                                               
+                                                                <li class="list-inline-item">
+                                                                    <h5 class="mb-1 text-white">Adresse</h5>
+                                                                    <p class="mb-0 font-13 text-white-50">{{client.adresse}}</p>
                                                                 </li>
                                                                 <li class="list-inline-item">
-                                                                    <h5 class="mb-1 text-white">5482</h5>
-                                                                    <p class="mb-0 font-13 text-white-50">Number of Orders</p>
+                                                                    <h5 class="mb-1 text-white">Login</h5>
+                                                                    <p class="mb-0 font-13 text-white-50">{{client.login}}</p>
+                                                                </li>
+                                                                <li class="list-inline-item">
+                                                                    <h5 class="mb-1 text-white">Password</h5>
+                                                                    <p class="mb-0 font-13 text-white-50">{{client. password}}</p>
                                                                 </li>
                                                             </ul>
                                                         </div>
@@ -77,144 +96,22 @@
 
                                             <div class="col-sm-4">
                                                 <div class="text-center mt-sm-0 mt-3 text-sm-end">
-                                                    <button type="button" class="btn btn-light">
+                                                    <button type="button" class="btn btn-light" (click)="ouvrirModifierClient(client. idClient)">
                                                         <i class="mdi mdi-account-edit me-1"></i> Edit Profile
                                                     </button>
-                                                    <button class="btn btn-danger">Delete</button>
+                                                    <button class="btn btn-danger" (click)="supprimerClient(client)">Delete</button>
                                                 </div>
                                             </div> <!-- end col-->
                                         </div> <!-- end row -->
 
                                     </div> <!-- end card-body/ profile-user-box-->
                                 </div>
-                                <div class="card bg-primary">
-                                    <div class="card-body profile-user-box">
-                                        <div class="row">
-                                            <div class="col-sm-8">
-                                                <div class="row align-items-center">
-                                                    <div class="col-auto">
-                                                        <div class="avatar-lg">
-                                                            <img src="assets/images/users/avatar-2.jpg" alt="" class="rounded-circle img-thumbnail">
-                                                        </div>
-                                                    </div>
-                                                    <div class="col">
-                                                        <div>
-                                                            <h4 class="mt-1 mb-1 text-white">Chikh Marwen</h4>
-                                                            <p class="font-13 text-white-50"> Rajel</p>
-    
-                                                            <ul class="mb-0 list-inline text-light">
-                                                                <li class="list-inline-item me-3">
-                                                                    <h5 class="mb-1 text-white">$ 25,184</h5>
-                                                                    <p class="mb-0 font-13 text-white-50">Total Revenue</p>
-                                                                </li>
-                                                                <li class="list-inline-item">
-                                                                    <h5 class="mb-1 text-white">5482</h5>
-                                                                    <p class="mb-0 font-13 text-white-50">Number of Orders</p>
-                                                                </li>
-                                                            </ul>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div> <!-- end col-->
-
-                                            <div class="col-sm-4">
-                                                <div class="text-center mt-sm-0 mt-3 text-sm-end">
-                                                    <button type="button" class="btn btn-light">
-                                                        <i class="mdi mdi-account-edit me-1"></i> Edit Profile
-                                                    </button>
-                                                    <button class="btn btn-danger">Delete</button>
-                                                </div>
-                                            </div> <!-- end col-->
-                                        </div> <!-- end row -->
-
-                                    </div> <!-- end card-body/ profile-user-box-->
-                                </div>
-                                <div class="card bg-primary">
-                                    <div class="card-body profile-user-box">
-                                        <div class="row">
-                                            <div class="col-sm-8">
-                                                <div class="row align-items-center">
-                                                    <div class="col-auto">
-                                                        <div class="avatar-lg">
-                                                            <img src="assets/images/users/avatar-2.jpg" alt="" class="rounded-circle img-thumbnail">
-                                                        </div>
-                                                    </div>
-                                                    <div class="col">
-                                                        <div>
-                                                            <h4 class="mt-1 mb-1 text-white">BenBrahim Jamil</h4>
-                                                            <p class="font-13 text-white-50"> 3attay tremi</p>
-    
-                                                            <ul class="mb-0 list-inline text-light">
-                                                                <li class="list-inline-item me-3">
-                                                                    <h5 class="mb-1 text-white">$ 25,184</h5>
-                                                                    <p class="mb-0 font-13 text-white-50">Total Revenue</p>
-                                                                </li>
-                                                                <li class="list-inline-item">
-                                                                    <h5 class="mb-1 text-white">5482</h5>
-                                                                    <p class="mb-0 font-13 text-white-50">Number of Orders</p>
-                                                                </li>
-                                                            </ul>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div> <!-- end col-->
-
-                                            <div class="col-sm-4">
-                                                <div class="text-center mt-sm-0 mt-3 text-sm-end">
-                                                    <button type="button" class="btn btn-light">
-                                                        <i class="mdi mdi-account-edit me-1"></i> Edit Profile
-                                                    </button>
-                                                    <button class="btn btn-danger">Delete</button>
-                                                </div>
-                                            </div> <!-- end col-->
-                                        </div> <!-- end row -->
-
-                                    </div> <!-- end card-body/ profile-user-box-->
-                                </div>
-                                <div class="card bg-primary">
-                                    <div class="card-body profile-user-box">
-                                        <div class="row">
-                                            <div class="col-sm-8">
-                                                <div class="row align-items-center">
-                                                    <div class="col-auto">
-                                                        <div class="avatar-lg">
-                                                            <img src="assets/images/users/avatar-2.jpg" alt="" class="rounded-circle img-thumbnail">
-                                                        </div>
-                                                    </div>
-                                                    <div class="col">
-                                                        <div>
-                                                            <h4 class="mt-1 mb-1 text-white">BenBrahim Jamil</h4>
-                                                            <p class="font-13 text-white-50"> 3attay tremi</p>
-    
-                                                            <ul class="mb-0 list-inline text-light">
-                                                                <li class="list-inline-item me-3">
-                                                                    <h5 class="mb-1 text-white">$ 25,184</h5>
-                                                                    <p class="mb-0 font-13 text-white-50">Total Revenue</p>
-                                                                </li>
-                                                                <li class="list-inline-item">
-                                                                    <h5 class="mb-1 text-white">5482</h5>
-                                                                    <p class="mb-0 font-13 text-white-50">Number of Orders</p>
-                                                                </li>
-                                                            </ul>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div> <!-- end col-->
-
-                                            <div class="col-sm-4">
-                                                <div class="text-center mt-sm-0 mt-3 text-sm-end">
-                                                    <button type="button" class="btn btn-light">
-                                                        <i class="mdi mdi-account-edit me-1"></i> Edit Profile
-                                                    </button>
-                                                    <button class="btn btn-danger">Delete</button>
-                                                </div>
-                                            </div> <!-- end col-->
-                                        </div> <!-- end row -->
-
-                                    </div> <!-- end card-body/ profile-user-box-->
-                                </div><!--end profile/ card -->
+                               
+                              
+                               <!--end profile/ card -->
                             </div> <!-- end col-->
                         </div>
+                    </div>
             
                         
                     </div> <!-- container -->

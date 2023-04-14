@@ -50,6 +50,11 @@ export class AdminstrateurService {
     return this.http.put<Adminstrateur>(`${this.modifadminURl}/${a.idadmin}`, a, httpOptions);
 
   }
+  //afficher les nombre des adminstrateurs
+  getadminCount(): Observable<Adminstrateur[]> {
+    return this.http.get<Adminstrateur[]>(`${this.getAdminURL}`);
+   
+      };
 
 
 }
