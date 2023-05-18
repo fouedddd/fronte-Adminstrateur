@@ -14,10 +14,10 @@ export class ListMessageComponent implements OnInit{
 
   }
   ngOnInit(): void {
+  this.chargermessages();
+
   
   }
-
-
 
 
 
@@ -26,6 +26,12 @@ export class ListMessageComponent implements OnInit{
       console.log(m);
       this.messages=m;
     });
+  }
+ 
+
+
+  deleteMessage(message: any) {
+    this.servicemessage.supprimerMessage(message);
   }
 
 }

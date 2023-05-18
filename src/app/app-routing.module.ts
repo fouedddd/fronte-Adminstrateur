@@ -10,6 +10,8 @@ import { LoginComponent } from './pages/login/login.component';
 import { ListMessageComponent } from './pages/Message/list-message/list-message.component';
 import { RegisterComponent } from './pages/register/register.component';
 import { ListDABComponent } from './pages/DAB/list-dab/list-dab.component';
+import { RecoverpwComponent } from './pages/recoverpw/recoverpw.component';
+import { LogoutComponent } from './pages/logout/logout.component';
 
 const routes: Routes = [
 {
@@ -53,10 +55,15 @@ component: LoginComponent
 {
   path:'listDAB',
   component:ListDABComponent
+},
+{
+  path:'recoverpw',
+  component:RecoverpwComponent
+},
+{
+  path:'logout',
+  component:LogoutComponent
 }
-
-
-
 
 ];
 

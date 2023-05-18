@@ -11,282 +11,37 @@
       </div>
         <div class="row" >
            
-           
-            <div class="col-md-6 col-xxl-3">
+            <div class="col-md-6 col-xxl-3" *ngFor="let Dab of dabs">
                 <!-- project card -->
                 <div class="card d-block">
                     <!-- project-thumbnail -->
-                    <img class="card-img-top" src="assets/images/projects/6.png" alt="project image cap">
-                  
-        
+                    <img class="card-img-top" width="50px" height="100px" src="{{Dab.image}}" alt="project image cap">
+            
                     <div class="card-body position-relative">
-                        <!-- project title-->
-                        <h4 class="mt-0">
-                            Banque internationale arabe de Tunisie
+                        <!-- project title -->
+                        <h4 class="mt-0" style="font-size: 16px; color: #666666; margin: 0 0 0 8px; font-weight: bold;">
+                            {{Dab.banque}}
+                            <hr>
                         </h4>
-        
-                        <!-- project detail-->
+            
+                        <!-- project detail -->
                         <p class="mb-3">
-                          
                             <span class="text-nowrap">
-                                <i class="mdi mdi-comment-multiple-outline"></i>
-                                <b>104</b> Comments
+                                <p style="font-size: 16px; color: #666666; margin: 0 0 0 8px; ">{{Dab.etat === '1' ? 'En Service  ' : 'Hors service'}}</p>
                             </span>
                         </p>
-                       
-        
-                      
-                    </div> <!-- end card-body-->
-                </div> <!-- end card-->
-            </div> 
-        
-            <div class="col-md-6 col-xxl-3">
-                <!-- project card -->
-                <div class="card d-block">
-                    <!-- project-thumbnail -->
-                    <img class="card-img-top" src="assets/images/projects/zitouna.png" alt="project image cap">
-                   
-        
-                    <div class="card-body position-relative">
-                        <!-- project title-->
-                        <h4 class="mt-0">
-                         Zitouna Banque
-                        </h4>
-        
-                        <!-- project detail-->
-                        <p class="mb-3">
-                            
-                            <span class="text-nowrap">
-                                <i class="mdi mdi-comment-multiple-outline"></i>
-                                <b>254</b> Comments
-                            </span>
-                        </p>
-                     
-        
-                     
-                    </div> <!-- end card-body-->
-                </div> <!-- end card-->
-            </div> <!-- end col -->
-            <div class="col-md-6 col-xxl-3">
-                <!-- project card -->
-                <div class="card d-block">
-                    <!-- project-thumbnail -->
-                    <img class="card-img-top" src="assets/images/projects/2.png" alt="project image cap">
-                   
-        
-                    <div class="card-body position-relative">
-                        <!-- project title-->
-                        <h4 class="mt-0">
-                         Banque Nationale Agricole
-                        </h4>
-        
-                        <!-- project detail-->
-                        <p class="mb-3">
-                           
-                            <span class="text-nowrap">
-                                <i class="mdi mdi-comment-multiple-outline"></i>
-                                <b>254</b> Comments
-                            </span>
-                        </p>
-                        
-        
-                        
-                    </div> <!-- end card-body-->
-                </div> <!-- end card-->
+                        <h4>Adresse:{{Dab.adresse}}</h4>
+            
+                        <!-- Edit and Delete buttons -->
+                        <div class="button-group">
+                            <button class="edit-button" >Edit</button>
+                            <button class="delete-button" (click)="supprimerDAB(Dab)">Delete</button>
+                        </div>
+                    </div> <!-- end card-body -->
+                </div> <!-- end card -->
             </div>
-            <div class="col-md-6 col-xxl-3">
-                <!-- project card -->
-                <div class="card d-block">
-                    <!-- project-thumbnail -->
-                    <img class="card-img-top" src="assets/images/projects/bh.png" alt="project image cap">
-                   
-        
-                    <div class="card-body position-relative">
-                        <!-- project title-->
-                        <h4 class="mt-0">
-                            BH Banque
-                        </h4>
-        
-                        <!-- project detail-->
-                        <p class="mb-3">
-                         
-                            <span class="text-nowrap">
-                                <i class="mdi mdi-comment-multiple-outline"></i>
-                                <b>254</b> Comments
-                            </span>
-                        </p>
-                      
-        
-                        <!-- project progress-->
-                       
-                       
-                    </div> <!-- end card-body-->
-                </div> <!-- end card-->
-            </div>
-        
-            <div class="col-md-6 col-xxl-3">
-                <!-- project card -->
-                <div class="card d-block">
-                    <!-- project-thumbnail -->
-                    <img class="card-img-top" src="assets/images/projects/3.jpg" alt="project image cap">
-                    
-        
-                    <div class="card-body position-relative">
-                        <!-- project title-->
-                        <h4 class="mt-0">
-                           Attijari bank
-                        </h4>
-        
-                        <!-- project detail-->
-                        <p class="mb-3">
-                            
-                            <span class="text-nowrap">
-                                <i class="mdi mdi-comment-multiple-outline"></i>
-                                <b>668</b> Comments
-                            </span>
-                        </p>
-                      
-        
-                   
-                    </div> <!-- end card-body-->
-                </div> <!-- end card-->
-            </div> <!-- end col -->
-        
-            <div class="col-md-6 col-xxl-3">
-                <!-- project card -->
-                <div class="card d-block">
-                    <!-- project-thumbnail -->
-                    <img class="card-img-top" src="assets/images/projects/5.jpg" alt="project image cap">
-                   
-        
-                    <div class="card-body position-relative">
-                        <!-- project title-->
-                        <h4 class="mt-0">
-                            AMEN BANK
-                        </h4>
-        
-                        <!-- project detail-->
-                        <p class="mb-3">
-                            
-                            <span class="text-nowrap">
-                                <i class="mdi mdi-comment-multiple-outline"></i>
-                                <b>259</b> Comments
-                            </span>
-                        </p>
-                       
-        
-                     
-                    </div> <!-- end card-body-->
-                </div> <!-- end card-->
-            </div> <!-- end col -->
-            <div class="col-md-6 col-xxl-3">
-                <!-- project card -->
-                <div class="card d-block">
-                    <!-- project-thumbnail -->
-                    <img class="card-img-top" src="assets/images/projects/ATB.png" alt="project image cap">
-                   
-        
-                    <div class="card-body position-relative">
-                        <!-- project title-->
-                        <h4 class="mt-0">
-                            ATB
-                        </h4>
-        
-                        <!-- project detail-->
-                        <p class="mb-3">
-                            
-                            <span class="text-nowrap">
-                                <i class="mdi mdi-comment-multiple-outline"></i>
-                                <b>259</b> Comments
-                            </span>
-                        </p>
-                       
-        
-                     
-                    </div> <!-- end card-body-->
-                </div> <!-- end card-->
-            </div> <!-- end col -->
-            <div class="col-md-6 col-xxl-3">
-                <!-- project card -->
-                <div class="card d-block">
-                    <!-- project-thumbnail -->
-                    <img class="card-img-top" src="assets/images/projects/STB.png" alt="project image cap">
-                   
-        
-                    <div class="card-body position-relative">
-                        <!-- project title-->
-                        <h4 class="mt-0">
-                            Sociéte Tunisienne de Bank
-                        </h4>
-        
-                        <!-- project detail-->
-                        <p class="mb-3">
-                            
-                            <span class="text-nowrap">
-                                <i class="mdi mdi-comment-multiple-outline"></i>
-                                <b>259</b> Comments
-                            </span>
-                        </p>
-                       
-        
-                     
-                    </div> <!-- end card-body-->
-                </div> <!-- end card-->
-            </div> <!-- end col -->
-            <div class="col-md-6 col-xxl-3">
-                <!-- project card -->
-                <div class="card d-block">
-                    <!-- project-thumbnail -->
-                    <img class="card-img-top" src="assets/images/projects/5.jpg" alt="project image cap">
-                   
-        
-                    <div class="card-body position-relative">
-                        <!-- project title-->
-                        <h4 class="mt-0">
-                            AMEN BANK
-                        </h4>
-        
-                        <!-- project detail-->
-                        <p class="mb-3">
-                            
-                            <span class="text-nowrap">
-                                <i class="mdi mdi-comment-multiple-outline"></i>
-                                <b>259</b> Comments
-                            </span>
-                        </p>
-                       
-        
-                     
-                    </div> <!-- end card-body-->
-                </div> <!-- end card-->
-            </div> <!-- end col -->
-            <div class="col-md-6 col-xxl-3">
-                <!-- project card -->
-                <div class="card d-block">
-                    <!-- project-thumbnail -->
-                    <img class="card-img-top" src="assets/images/projects/5.jpg" alt="project image cap">
-                   
-        
-                    <div class="card-body position-relative">
-                        <!-- project title-->
-                        <h4 class="mt-0">
-                            AMEN BANK
-                        </h4>
-        
-                        <!-- project detail-->
-                        <p class="mb-3">
-                            
-                            <span class="text-nowrap">
-                                <i class="mdi mdi-comment-multiple-outline"></i>
-                                <b>259</b> Comments
-                            </span>
-                        </p>
-                       
-        
-                     
-                    </div> <!-- end card-body-->
-                </div> <!-- end card-->
-            </div> <!-- end col -->
+            
+
         </div>
     </div>
 </div>

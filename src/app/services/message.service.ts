@@ -15,6 +15,8 @@ const httpOptions = {
 export class MessageService {
 
   getmessageURL: string ="http://localhost:8080/GetAllmessage";
+  deleteMessURL:string="http://localhost:8080/DeleteMessage";
+  messages: Message[] =[];
 
   constructor(private http: HttpClient) { }
 
@@ -29,4 +31,12 @@ getmessageCount(): Observable<Message[]> {
     return this.http.get<Message[]>(this.getmessageURL);
 
   }
+
+    //methode supprimer message
+    supprimerMessage(id: any): any {
+      const url = `${this.deleteMessURL}/${id}`;
+      return this.http.delete(url, httpOptions);
+  
+  
+    }
 }

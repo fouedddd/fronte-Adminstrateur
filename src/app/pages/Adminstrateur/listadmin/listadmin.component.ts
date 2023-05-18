@@ -3,6 +3,7 @@ import { MatDialog } from '@angular/material/dialog';
 import { Adminstrateur } from 'src/app/model/adminstrateur.model';
 import { AdminstrateurService } from 'src/app/services/adminstrateur.service';
 import { AjoutadminComponent } from '../ajoutadmin/ajoutadmin.component';
+import { ConfirmationDialogConfirmationComponent } from '../../confirmation-dialog-confirmation/confirmation-dialog-confirmation.component';
 
 
 
@@ -46,16 +47,20 @@ export class ListadminComponent implements OnInit {
       this.adminstrateurs=adm;
     });
   }
-  supprimerAdmin(a:Adminstrateur){
-    let conf =confirm("Etes-vous sur ?");
-    if(conf)
-    this.adminservice.supprimerAdmin(a.idadmin).subscribe(()=>{
-      console.log("adminstrateur supprimé");
-      //this.chargeradmin();
-    }
-    );
-
-
+  supprimerAdmin(a: any) {
+    const dialogRef = this._dialog.open(ConfirmationDialogConfirmationComponent, {
+      width: '250px'
+    });
+  
+    dialogRef.afterClosed().subscribe(result => {
+      if (result) {
+        this.adminservice.supprimerAdmin(a).subscribe(() => {
+          console.log("administrateur supprimé");
+          
+        });
+      }
+    });
+  
   }
   ouvrirModifierAdmin(data:any){
     this._dialog.open(AjoutadminComponent,{

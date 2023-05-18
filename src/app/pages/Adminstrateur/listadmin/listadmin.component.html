@@ -2,22 +2,25 @@
 <html lang="en">
 
     
-<!-- Mirrored from coderthemes.com/hyper/saas/apps-ecommerce-sellers.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 20 Mar 2023 20:41:31 GMT -->
 <head>
         <meta charset="utf-8" />
-        <title>Liste Adminstrateurs</title>
+        <title>List Adminstrateurs</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta content="A fully featured admin theme which can be used to build CRM, CMS, etc." name="description" />
         <meta content="Coderthemes" name="author" />
 
-        <!-- App favicon -->
-    
+   
     </head>
 
     <body>
+        
         <!-- Begin page -->
         <div class="wrapper">
+          
 
+            
+           
+         
 
             <div class="content-page">
                 <div class="content">
@@ -30,102 +33,95 @@
                             <div class="col-12">
                                 <div class="page-title-box">
                                     <div class="page-title-right">
-                                   
+                                        <ol class="breadcrumb m-0">
+                                        </ol>
                                     </div>
-                                    <h4 class="page-title">List Adminstrateurs</h4>
+                                    <h4 class="page-title">List Client</h4>
+                                    <button mat-raised-button (click)="ouvrirAjouterAdmin()" class="btn btn-success">
+                                        <i class="mdi mdi-account-edit me-1"></i> Ajouter Client
+                                    </button>
                                 </div>
+                                <br>
                             </div>
                         </div>
                         <!-- end page title -->
 
+<div *ngFor="let adminstrateur of adminstrateurs">
                         <div class="row">
-                            <div class="col-12">
-                                <div class="card">
-                                    <div class="card-body">
-                                        <div class="row mb-2">
-                                            <div class="col-sm-5">
-                                                <button class="btn btn-success mb-2" (click)="ouvrirAjouterAdmin()"><i class="mdi mdi-plus-circle me-2"></i> ajouter Adminstrateur</button>
-                                            </div>
-                                            <div class="col-sm-7">
-                                                <div class="text-sm-end">
-                                                    <button type="button" class="btn btn-success mb-2 me-1"><i class="mdi mdi-cog"></i></button>
-                                                    <button type="button" class="btn btn-light mb-2 me-1">Import</button>
-                                                    <button type="button" class="btn btn-light mb-2">Export</button>
+                            <div class="col-sm-12">
+                                <!-- Profile -->
+                                <div class="card bg-primary" >
+                                    <div class="card-body profile-user-box">
+                                        <div class="row">
+                                            <div class="col-sm-8">
+                                                <div class="row align-items-center">
+                                                    <div class="col-auto">
+                                                      
+                                                    </div>
+                                                    <div class="col">
+                                                        <div class="client-details">
+                                                          <ul class="mb-0 list-inline text-light">
+                                                            <li class="list-inline-item">
+                                                              <h4 class="mt-1 mb-1 text-white">Nom</h4>
+                                                              <p class="font-13 text-white-50">{{adminstrateur.firstName}}</p>
+                                                            </li>
+                                                            <li class="list-inline-item">
+                                                              <h4 class="mt-1 mb-1 text-white">Prénom</h4>
+                                                              <p class="mb-0 font-13 text-white-50">{{adminstrateur.lastName}}</p>
+                                                            </li>
+                                                            <li class="list-inline-item">
+                                                              <h4 class="mt-1 mb-1 text-white">Email</h4>
+                                                              <p class="mb-0 font-13 text-white-50">{{adminstrateur.email}}</p>
+                                                            </li>
+                                                          </ul>
+                                                      
+                                                          <ul class="mb-0 list-inline text-light">
+                                                            <li class="list-inline-item">
+                                                              <h4 class="mt-1 mb-1 text-white">Login</h4>
+                                                              <p class="mb-0 font-13 text-white-50">{{adminstrateur.login}}</p>
+                                                            </li>
+                                                            <li class="list-inline-item">
+                                                              <h4 class="mt-1 mb-1 text-white">Password</h4>
+                                                              <p class="mb-0 font-13 text-white-50">{{adminstrateur.password}}</p>
+                                                            </li>
+                                                          </ul>
+                                                        </div>
+                                                      </div>
+                                                      
+                                                    
+                                                    
                                                 </div>
-                                            </div><!-- end col-->
-                                        </div>
-                
-                                        <div class="table-responsive">
-                                            <table class="table table-centered table-borderless table-hover w-100 dt-responsive nowrap" id="products-datatable">
-                                                <thead class="table-light">
-                                                    <tr>
-                                                       <th>Id</th>
-                                                        <th>Nom</th>
-                                                        <th>Prénom</th>
-                                                        <th>Email</th>
-                            
-                                                        <th>Login</th>
-                                                        <th>Password</th>
-                                                        <th>ConfirmPassword</th>
-                                                        <th style="width: 75px;">Action</th>
-                                                    </tr>
-                                                </thead>
-                                                <tbody *ngFor="let adminstrateur of adminstrateurs">
-                                                    <tr><td>{{adminstrateur.idadmin}}</td>
-                                                        <td>{{adminstrateur.firstName}}</td>
-                                                        <td>{{adminstrateur.lastName}}</td>
-                                                        <td>{{adminstrateur.email}}</td>
-                                                        <td>{{adminstrateur.login}}</td>
-                                                        <td>{{adminstrateur.password}}</td>
-                                                        <td>{{adminstrateur.confirmpassword}}</td>
-                                                       <td><a class="btn btn-danger" (click)="supprimerAdmin(adminstrateur)">supprimer</a>
-                                                        <button (click)="ouvrirModifierAdmin(adminstrateur.idadmin)" class="btn  btn-success">Modifier</button>
-                                                    </tr>
-                                                    
-                                                   
-                                                    
-                                               
-                                                
-                                                  
-                                                    
-                                                  
-                                                </tbody>
-                                            </table>
-                                        </div>
-                                    </div> <!-- end card-body-->
-                                </div> <!-- end card-->
-                            </div> <!-- end col -->
+                                            </div> <!-- end col-->
+
+                                            <div class="col-sm-4">
+                                                <div class="text-center mt-sm-0 mt-3 text-sm-end">
+                                                    <button type="button" class="btn btn-light" (click)="ouvrirModifierAdmin(adminstrateur.idadmin)">
+                                                        <i class="mdi mdi-account-edit me-1"></i> Edit Profile
+                                                    </button>
+                                                    <button class="btn btn-danger" (click)=" supprimerAdmin(adminstrateur.idadmin)">Delete</button>
+                                                </div>
+                                            </div> <!-- end col-->
+                                        </div> <!-- end row -->
+
+                                    </div> <!-- end card-body/ profile-user-box-->
+                                </div>
+                               
+                              
+                               <!--end profile/ card -->
+                            </div> <!-- end col-->
                         </div>
-                        <!-- end row -->
+                    </div>
+            
                         
                     </div> <!-- container -->
 
                 </div> <!-- content -->
 
-                <!-- Footer Start -->
-                <footer class="footer">
-                    <div class="container-fluid">
-                        <div class="row">
-                            <div class="col-md-6">
-                                <script>document.write(new Date().getFullYear())</script> © Hyper - Coderthemes.com
-                            </div>
-                            <div class="col-md-6">
-                                <div class="text-md-end footer-links d-none d-md-block">
-                                    <a href="javascript: void(0);">About</a>
-                                    <a href="javascript: void(0);">Support</a>
-                                    <a href="javascript: void(0);">Contact Us</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </footer>
-                <!-- end Footer -->
+             
 
             </div>
 
-            <!-- ============================================================== -->
-            <!-- End Page content -->
-            <!-- ============================================================== -->
+        
 
         </div>
         <!-- END wrapper -->
@@ -793,35 +789,18 @@
                             </div>
                         </div>
 
-                        <div id="sidebar-user">
-                            <div class="d-flex justify-content-between align-items-center mt-3">
-                                <label class="font-16 fw-bold m-0" for="sidebaruser-check">Sidebar User Info</label>
-                                <div class="form-check form-switch">
-                                    <input type="checkbox" class="form-check-input" name="sidebar-user" id="sidebaruser-check">
-                                </div>
-                            </div>
-                        </div>
+                      
 
                     </div>
                 </div>
 
             </div>
-            <div class="offcanvas-footer border-top p-3 text-center">
-                <div class="row">
-                    <div class="col-6">
-                        <button type="button" class="btn btn-light w-100" id="reset-layout">Reset</button>
-                    </div>
-                    <div class="col-6">
-                        <a href="https://themes.getbootstrap.com/product/hyper-responsive-admin-dashboard-template/" target="_blank" role="button" class="btn btn-primary w-100">Buy Now</a>
-                    </div>
-                </div>
-            </div>
+           
         </div>
 
-        <!-- Vendor js -->
-      
+       
 
     </body>
 
-<!-- Mirrored from coderthemes.com/hyper/saas/apps-ecommerce-sellers.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 20 Mar 2023 20:41:31 GMT -->
+<!-- Mirrored from coderthemes.com/hyper/saas/pages-profile.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 20 Mar 2023 20:41:16 GMT -->
 </html>

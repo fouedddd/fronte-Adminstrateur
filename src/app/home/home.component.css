@@ -1,0 +1,27 @@
+.custom-row {
+    margin-bottom: 20px; /* Ajoute un espacement en bas de la row */
+  }
+  
+  .custom-card {
+    height: 100%; /* Assure que les cartes s'étendent à 100% de la hauteur de la row */
+    /* Ajoutez ici d'autres styles personnalisés pour les cartes si nécessaire */
+  }
+  
+  .custom-card-body {
+
+  }
+  
+  .custom-title {
+    font-size: 16px; /* Modifie la taille de police des titres */
+    /* Ajoutez ici d'autres styles personnalisés pour les titres si nécessaire */
+  }
+  
+  .custom-value {
+    font-size: 24px; /* Modifie la taille de police des valeurs numériques */
+    /* Ajoutez ici d'autres styles personnalisés pour les valeurs numériques si nécessaire */
+  }
+  
+  .custom-chart {
+    /* Ajoutez ici d'autres styles personnalisés pour les chartes si nécessaire */
+  }
+  

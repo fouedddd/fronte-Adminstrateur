@@ -17,6 +17,7 @@ const httpOptions = {
 export class DabService {
   getDabtURL: string ="http://localhost:8080/GetAllDAB";
   AjoutDABURL:string="http://localhost:8080/addDAB";
+  supdab:string="http://localhost:8080/DeleteDAB";
   constructor(private http: HttpClient) { }
 
 //methode retourne les nombre de tous les DAB
@@ -30,6 +31,14 @@ ajouterDAB(db: Dab): Observable<Dab> {
   return this.http.post<Dab>(this.AjoutDABURL,db,httpOptions);
 
 }
+      //methode supprimer un adminstrateur
+  supprimerDAB(id: any): any {
+
+    const url = `${this.supdab}/${id}`;
+    return this.http.delete(url,httpOptions);
+
+
+  }
 
 
 }

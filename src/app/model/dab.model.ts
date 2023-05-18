@@ -6,6 +6,6 @@ export class Dab{
 	longitude?:number;
 	plafon_max?:number;
 	 etat?:string;
-
-
+	 image?:string;
+	 adresse?:string;
 }

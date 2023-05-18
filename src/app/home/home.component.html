@@ -24,90 +24,106 @@
 
 				<div class="row">
 					<div class="col-md-6 col-xl-3">
-						<div class="card">
-							<div class="card-body">
-								<div class="row align-items-center">
-									<div class="col-6">
-										<h5 class="text-muted fw-normal mt-0 text-truncate" title="Campaign Sent">Clients</h5>
-										<h3 class="my-2 py-1"><div>{{clientCount}}</div></h3>
-										
-									</div>
-									<div class="col-6">
-										<div class="text-end">
-											<div id="campaign-sent-chart" data-colors="#727cf5"></div>
-										</div>
-									</div>
-								</div> <!-- end row-->
-							</div> <!-- end card-body -->
-						</div> <!-- end card -->
+					  <div class="card">
+						<div class="card-body">
+						  <div class="d-flex align-items-center">
+							<div class="flex-grow-1">
+							  <h5 class="text-muted fw-normal mt-0 text-truncate" title="Campaign Sent">Clients</h5>
+							  <h3 class="my-2 py-1">{{clientCount}}</h3>
+							</div>
+							<div>
+							  <div id="campaign-sent-chart" data-colors="#727cf5"></div>
+							</div>
+						  </div> <!-- end d-flex -->
+						</div> <!-- end card-body -->
+					  </div> <!-- end card -->
 					</div> <!-- end col -->
-
+				  
 					<div class="col-md-6 col-xl-3">
-						<div class="card">
-							<div class="card-body">
-								<div class="row align-items-center">
-									<div class="col-6">
-										<h5 class="text-muted fw-normal mt-0 text-truncate" title="New Leads">Adminstrateur</h5>
-										<h3 class="my-2 py-1"><div>{{adminCount}}</div></h3>
-									
-									</div>
-									<div class="col-6">
-										<div class="text-end">
-											<div id="new-leads-chart" data-colors="#0acf97"></div>
-										</div>
-									</div>
-								</div> <!-- end row-->
-							</div> <!-- end card-body -->
-						</div> <!-- end card -->
+					  <div class="card">
+						<div class="card-body">
+						  <div class="d-flex align-items-center">
+							<div class="flex-grow-1">
+							  <h5 class="text-muted fw-normal mt-0 text-truncate" title="New Leads">Adminstrateur</h5>
+							  <h3 class="my-2 py-1">{{adminCount}}</h3>
+							</div>
+							<div>
+							  <div id="new-leads-chart" data-colors="#0acf97"></div>
+							</div>
+						  </div> <!-- end d-flex -->
+						</div> <!-- end card-body -->
+					  </div> <!-- end card -->
 					</div> <!-- end col -->
-
+				  
 					<div class="col-md-6 col-xl-3">
-						<div class="card">
-							<div class="card-body">
-								<div class="row align-items-center">
-									<div class="col-6">
-										<h5 class="text-muted fw-normal mt-0 text-truncate" title="Deals">DAB</h5>
-										<h3 class="my-2 py-1"><div>{{dabCount}}</div></h3>
-										
-									</div>
-									<div class="col-6">
-										<div class="text-end">
-											<div id="deals-chart" data-colors="#727cf5"></div>
-										</div>
-									</div>
-								</div> <!-- end row-->
-							</div> <!-- end card-body -->
-						</div> <!-- end card -->
+					  <div class="card">
+						<div class="card-body">
+						  <div class="d-flex align-items-center">
+							<div class="flex-grow-1">
+							  <h5 class="text-muted fw-normal mt-0 text-truncate" title="Deals">DAB</h5>
+							  <h3 class="my-2 py-1">{{dabCount}}</h3>
+							</div>
+							<div>
+							  <div id="deals-chart" data-colors="#727cf5"></div>
+							</div>
+						  </div> <!-- end d-flex -->
+						</div> <!-- end card-body -->
+					  </div> <!-- end card -->
 					</div> <!-- end col -->
-
+				  
 					<div class="col-md-6 col-xl-3">
-						<div class="card">
-							<div class="card-body">
-								<div class="row align-items-center">
-									<div class="col-6">
-										<h5 class="text-muted fw-normal mt-0 text-truncate" title="Booked Revenue">Messages</h5>
-										<h3 class="my-2 py-1"><div>{{messageCount}}</div></h3>
-										
-									</div>
-									<div class="col-6">
-										<div class="text-end">
-											<div id="booked-revenue-chart" data-colors="#0acf97"></div>
-										</div>
-									</div>
-								</div> <!-- end row-->
-							</div> <!-- end card-body -->
-						</div> <!-- end card -->
+					  <div class="card">
+						<div class="card-body">
+						  <div class="d-flex align-items-center">
+							<div class="flex-grow-1">
+							  <h5 class="text-muted fw-normal mt-0 text-truncate" title="Booked Revenue">Messages</h5>
+							  <h3 class="my-2 py-1">{{messageCount}}</h3>
+							</div>
+							<div>
+							  <div id="booked-revenue-chart" data-colors="#0acf97"></div>
+							</div>
+						  </div> <!-- end d-flex -->
+						</div> <!-- end card-body -->
+					  </div> <!-- end card -->
 					</div> <!-- end col -->
-				</div>
+				  </div>
+				  
 				
-				
+				  
+				  <div style="display: flex;">
+					<div style="flex: 1; margin-right: 10px;">
+						<div>
+							<h1>Nombre de visiteurs par jour :</h1>
+							<div #histogramCanvas></div>
+						  </div>
+					  <canvas baseChart width="600" height="400"
+						[type]="'line'"
+						[data]="lineChartData"
+						[options]="lineChartOptions"
+						[legend]="lineChartLegend">
+					  </canvas>
+					</div>
+					<div>
+						
+					<div style="flex: 1;">
+						<h1>Nombre d'utulisateur d'application :</h1>
+						<div #histogramCanvas></div>
+					  </div>
+					  <canvas baseChart
+						[labels]="doughnutChartLabels"
+						[datasets]="doughnutChartDatasets"
+						[options]="doughnutChartOptions"
+						[legend]="true"
+						[type]="'doughnut'">
+					  </canvas>
+					</div>
+				  </div>
+				  
 			</div> <!-- container -->
 
 		</div> <!-- content -->
-
-		
-
 	</div>
+
 
 
 

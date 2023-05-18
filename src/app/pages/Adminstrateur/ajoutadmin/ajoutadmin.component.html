@@ -1,38 +1,47 @@
-<div mat-dialog-title><h1>{{!type ?'Ajouter Adminstrateur':'Modifier Adminstrateur'}}</h1></div>
-<form action="">
-<div mat-dialog-content>
-   <div class="row">
-  
-    <mat-form-field appearance="outline">
+<div mat-dialog-title>
+  <h1>{{!type ?'Ajouter Adminstrateur':'Modifier Adminstrateur'}}</h1>
+</div>
+<form>
+  <div mat-dialog-content>
+    <div class="row">
+
+      <mat-form-field appearance="outline">
         <mat-label>Nom</mat-label>
-        <input matInput type="text" name="nom" [(ngModel)]="newAdminstrateur.firstName">
+        <input matInput type="text" formControllerName="firstName" name="firstName"
+          [(ngModel)]="newAdminstrateur.firstName" required>
+        <mat-error *ngIf="profileForm.controls.firstName.errors?.['required']">{{mess().firstNameError}}</mat-error>
       </mat-form-field>
       <mat-form-field appearance="outline">
         <mat-label>Prénom</mat-label>
-        <input  matInput type="text" name="prenom"[(ngModel)]="newAdminstrateur.lastName">
-      </mat-form-field>
+        <input matInput type="text" name="lastName" [(ngModel)]="newAdminstrateur.lastName" required>
+
+        <mat-error *ngIf="profileForm.controls.lastName.errors?.['required']">{{mess().lastNameError}}</mat-error> </mat-form-field>
       <mat-form-field appearance="outline">
         <mat-label>Email</mat-label>
-        <input matInput type="email" name="email" [(ngModel)]="newAdminstrateur.email">
-      </mat-form-field>
-    
+        <input matInput type="email" name="email" [(ngModel)]="newAdminstrateur.email" required>
+        <mat-error *ngIf="profileForm.controls.email.errors?.['required']">{{mess().emailError}}</mat-error>
+       </mat-form-field>
+     
+
       <mat-form-field appearance="outline">
         <mat-label>Login</mat-label>
-        <input matInput type="text" name="login" [(ngModel)]="newAdminstrateur.login">
+        <input matInput type="text" name="login" [(ngModel)]="newAdminstrateur.login" required>
+        <mat-error *ngIf="profileForm.controls.login.errors?.['required']">{{mess().loginError}}</mat-error>
       </mat-form-field>
       <mat-form-field appearance="outline">
         <mat-label>Password</mat-label>
-        <input matInput type="password" name="password" [(ngModel)]="newAdminstrateur.password">
+        <input matInput type="password" name="password" [(ngModel)]="newAdminstrateur.password" required >
+        <mat-error *ngIf="profileForm.controls.password.errors?.['required']">{{mess().passwordError}}</mat-error>
       </mat-form-field>
-      <mat-form-field appearance="outline">
-        <mat-label> Confirm Password</mat-label>
-        <input matInput type="password" name="password" [(ngModel)]="newAdminstrateur. confirmpassword">
-      </mat-form-field>
-   
-   </div>
-</div>
-<div mat-dialog-actions class="bt">
+    
+
+    </div>
+  </div>
+  <div mat-dialog-actions class="bt">
     <button mat-raised-button class="btn btn-danger" mat-dialog-close="false">cancel</button>
-    <button mat-raised-button class="btn btn-success" type="submit" (click)="ajouterAdmin()">{{!type ?'Ajouter':'Modifier'}}</button>
-</div>
+    <button mat-raised-button class="btn btn-success" type="submit" (click)="ajouterAdmin()">{{!type
+      ?'Ajouter':'Modifier'}}</button>
+  </div>
 </form>
+
+

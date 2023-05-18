@@ -36,7 +36,7 @@ export class AdminstrateurService {
   //methode supprimer un adminstrateur
   supprimerAdmin(id: any): any {
     const url = `${this.suppAdminURL}/${id}`;
-    return this.http.delete(url, httpOptions);
+    return this.http.delete(url);
 
 
   }

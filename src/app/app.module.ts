@@ -17,12 +17,18 @@ import { ListDABComponent } from './pages/DAB/list-dab/list-dab.component';
 import { ListMessageComponent } from './pages/Message/list-message/list-message.component';
 import { LoginComponent } from './pages/login/login.component';
 import { RegisterComponent } from './pages/register/register.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule  } from '@angular/forms';
 import {MatDialogModule} from '@angular/material/dialog';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AjoutClientComponent } from './pages/Client/ajout-client/ajout-client.component';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatInputModule} from '@angular/material/input';
+import { RecoverpwComponent } from './pages/recoverpw/recoverpw.component';
+import { MatButtonModule } from '@angular/material/button';
+import { LogoutComponent } from './pages/logout/logout.component';
+import { ConfirmationDialogConfirmationComponent } from './pages/confirmation-dialog-confirmation/confirmation-dialog-confirmation.component';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { NgChartsModule } from 'ng2-charts';
 @NgModule({
   declarations: [
     AppComponent,
@@ -41,6 +47,9 @@ import {MatInputModule} from '@angular/material/input';
     LoginComponent,
     RegisterComponent,
     AjoutClientComponent,
+    RecoverpwComponent,
+    LogoutComponent,
+    ConfirmationDialogConfirmationComponent,
    
     
     
@@ -53,7 +62,12 @@ import {MatInputModule} from '@angular/material/input';
    MatDialogModule,
    BrowserAnimationsModule,
    MatFormFieldModule,
-   MatInputModule
+   MatInputModule,
+   MatButtonModule,
+   MatSnackBarModule,
+   NgChartsModule
+   
+
   ],
   providers: [],
   bootstrap: [AppComponent]

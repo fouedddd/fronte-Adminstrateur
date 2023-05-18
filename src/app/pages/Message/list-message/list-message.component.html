@@ -1,117 +1,30 @@
-<body>
-    <!-- Begin page -->
-    <div class="wrapper">
-
-  
-
-        <div class="content-page">
-            <div class="content">
-
-                <!-- Start Content-->
-                <div class="container-fluid">
-                    <div class="row">
-                        <div class="col-12">
-                            <div class="page-title-box">
-                                <div class="page-title-right">
-                                   
-                                </div>
-                                <h4 class="page-title">Messages</h4>
-                            </div>
-                        </div>
+<div class="content-page">
+    <div class="card">
+        <div class="card-body" *ngFor="let mes of messages">
+            <h4 class="header-title">{{mes.nomComplet}}</h4>
+            <p  class="text-muted font-14">Sujet:{{mes.sujet}}</p>
+            <p>Email:{{mes.email}}</p>
+    
+          
+            <div class="tab-content">
+                <div class="tab-pane show active">
+                    <div class="d-flex flex-wrap gap-2">
+                        <button type="button" class="btn btn-primary" data-bs-toggle="tooltip" data-bs-placement="top"
+                            data-bs-custom-class="primary-tooltip" data-bs-title="This top tooltip is themed via CSS variables.">
+                            Repondre
+                        </button>
+                        <button type="button" class="btn btn-danger" data-bs-toggle="tooltip" data-bs-placement="top"
+                            data-bs-custom-class="danger-tooltip" data-bs-title="This top tooltip is themed via CSS variables.">
+                            Supprimer
+                        </button>
+                        
+                      
                     </div>
-                   
-
-                    <div class="row">
-
-                        <!-- Right Sidebar -->
-                        <div class="col-12">
-                            <div class="card" >
-                                <div class="card-body">
-                                 
-                                    <div class="content-page">
-
-
-                                     
-
-                                        <div class="col-12">
-                                            <div >
-                                                <ul class="email-list">
-                                                    <li class="unread">
-                                                        <div class="email-sender-info">
-                                                            <div class="checkbox-wrapper-mail">
-                                                                <div class="form-check">
-                                                                    <input type="checkbox" class="form-check-input" id="mail1">
-                                                                    <label class="form-check-label" for="mail1"></label>
-                                                                </div>
-                                                            </div>
-                                                            <span class="star-toggle mdi mdi-star-outline text-warning"></span>
-                                                            <a href="javascript: void(0);" class="email-title">Lucas Kriebel (via Twitter)</a>
-                                                        </div>
-                                                        <div class="email-content">
-                                                            <a href="javascript: void(0);" class="email-subject">Lucas Kriebel (@LucasKriebel) has sent
-                                                                you a direct message on Twitter! &nbsp;&ndash;&nbsp;
-                                                                <span>@LucasKriebel - Very cool :) Nicklas, You have a new direct message.</span>
-                                                            </a>
-                                                            <div class="email-date">11:49 am</div>
-                                                        </div>
-                                                        <div class="email-action-icons">
-                                                            <ul class="list-inline">
-                                                                <li class="list-inline-item">
-                                                                    <a href="javascript: void(0);"><i class="mdi mdi-archive email-action-icons-item"></i></a>
-                                                                </li>
-                                                                <li class="list-inline-item">
-                                                                    <a href="javascript: void(0);"><i class="mdi mdi-delete email-action-icons-item"></i></a>
-                                                                </li>
-                                                                <li class="list-inline-item">
-                                                                    <a href="javascript: void(0);"><i class="mdi mdi-email-open email-action-icons-item"></i></a>
-                                                                </li>
-                                                                <li class="list-inline-item">
-                                                                    <a href="javascript: void(0);"><i class="mdi mdi-clock email-action-icons-item"></i></a>
-                                                                </li>
-                                                            </ul>
-                                                        </div>
-                                                    </li>
+                </div> <!-- end preview-->
     
                 
-                                                </ul>
-                                            </div>
-                                         </div>
-                                        <!-- end .mt-4 -->
-
-                                        <div class="row">
-                                            <div class="col-7 mt-1">
-                                                Showing 1 - 20 of 289
-                                            </div> <!-- end col-->
-                                            <div class="col-5">
-                                                <div class="btn-group float-end">
-                                                    <button type="button" class="btn btn-light btn-sm"><i class="mdi mdi-chevron-left"></i></button>
-                                                    <button type="button" class="btn btn-info btn-sm"><i class="mdi mdi-chevron-right"></i></button>
-                                                </div>
-                                            </div> <!-- end col-->
-                                        </div>
-                                        <!-- end row-->
-                                    </div> 
-                                    <!-- end inbox-rightbar-->
-                                </div>
-                                <!-- end card-body -->
-                             
-                            </div> <!-- end card-box -->
-
-                        </div> <!-- end Col -->
-                    </div><!-- End row -->
-                    
-                </div> <!-- container -->
-
-            </div> <!-- content -->
-
-
-        </div>
-
-    
-
-    </div>
-  
-   
-
-
-</body>
+            </div> <!-- end tab-content-->
+        </div> <!-- end card-body -->
+    </div> 
+</div>
+<div class="hr-line"></div>
